@@ -36,16 +36,31 @@ A simple RabbitMQ python script
 		    time.sleep(5)
 
 
-	    def add_to_queue(self, json_point_list):
+	    def add_to_queue(self):
 			"""
 			======================================================================
 			* Method Name : add_to_queue
 			* Description : Add the data to queue
-			* Args   : json_point_list
+			* Args   : None
 			* Return : None
 			======================================================================
 			"""
-		queue_name = json_point_list['device_name']
+		    queue_name = "device_name"
 
 			self.queue_manager.create_queue(queue_name)
-			self.queue_manager.add_data_to_queue(queue_name, json_point_list)
+			self.queue_manager.add_data_to_queue(queue_name, data)
+			
+			
+		def read_from_queue(self):
+			"""
+			======================================================================
+			* Method Name : read_from_queue
+			* Description : Read the data to queue
+			* Args   : None
+			* Return : None
+			======================================================================
+			"""
+			self.queue_manager.create_queue(queue_name)
+            self.queue_manager.consume_queues(queue_name, callback_function)
+			self.queue_manager.consume_start()
+
