@@ -2,8 +2,9 @@
 ======================================================================
 * Module Name : queue_manager.py
 * Created by  : Alan Raj C
-* Created on  : 30-Sep-2020
-* Description : This file manages the class handling Queues in RabbitMQ
+* Created on  : 10-Oct-2021
+* Description : This file manages the class handling Queues in RabbitMQ.
+                Please see the README file for the usage
 ======================================================================
 """
 
